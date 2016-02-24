@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'rock_paper_scissors/new'
-  get 'rock_paper_scissors/cool'
-
-
-
+  resources :games
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

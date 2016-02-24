@@ -1,0 +1,61 @@
+
+<div class="app" ng-app="RockPaperScissors">
+
+  <div ng-controller="AppCtrl as app">
+    <div class ="container">
+      <div class ="row">
+        <h1 id="rps">Rock Paper Scissors</h1>
+      </div>
+
+      <div class ="row no-gutter">
+        <div class ="col-md-6" id=player_1>
+          <h2>
+            Player 1
+            <input type="text" ng-model="game.player_1_name"></input>
+          </h2>
+          <p>Keyboard Controls: Rock A, Paper S, Scissors D</p>
+        </div>
+        <div class ="col-md-6" id=player_2>
+          <h2>
+            Player 2
+            <input type="text" ng-model="game.player_2_name"></input>
+          </h2>
+          <p>Keyboard Controls: Rock J, Paper K, Scissors L</p>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-2 col-md-offset-5'>
+        <button ng-click="saveGame()" class='btn btn-primary'>Go</button>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-2 col-md-offset-5'>
+        Winner is: {{game.winner}}
+      </div>
+  </div>
+</div>
+<!--
+
+      <h1>{{app.heading}}</h1>
+
+
+      <h3>{{app.path}}</h3>
+          <input type="text" ng-model="app.txt">
+          <span>{{app.txt}}</span>
+
+      <p>
+        {{app.awesome}}
+      </p>
+
+      <awesome></awesome>
+
+  </div>
+</div>
+
+<div class ="container">
+  <div class ="row">
+    <h1 id="rps">Rock Paper Scissors</h1>
+  </div>
+
+</div> -->

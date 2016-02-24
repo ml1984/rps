@@ -1,5 +1,4 @@
-class Rock < ActiveRecord::Base
-  belongs_to :Game
+class Rock
 
   def <=>(b)
     if b.is_a?(Scissor)

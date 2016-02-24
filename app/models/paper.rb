@@ -1,5 +1,4 @@
-class Paper < ActiveRecord::Base
-  belongs_to :Game
+class Paper
 
   def <=>(b)
     if b.is_a?(Rock)

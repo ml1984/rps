@@ -1,1 +1,1 @@
-angular.module('RockPaperScissors', ['templates', 'AppController']);
+angular.module('RockPaperScissors', ['templates', 'rails', 'AppController' ]);

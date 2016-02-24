@@ -25,8 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'angularjs-rails'
 gem 'angular-rails-templates'
-
+gem 'angularjs-rails-resource', '~> 2.0.0'
 gem 'angular-ui-bootstrap-rails'
+gem 'responders', '~> 2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,5 +1,4 @@
-class Scissor < ActiveRecord::Base
-  belongs_to :Game
+class Scissor
 
   def <=>(b)
     if b.is_a?(Paper)
@@ -8,6 +7,7 @@ class Scissor < ActiveRecord::Base
       -1
     elsif b.is_a?(Scissor)
       0
+    end
   end
 
 end

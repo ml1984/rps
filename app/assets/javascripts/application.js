@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require angular
+//= require angularjs/rails/resource
 //= require angular-rails-templates
 //= require_tree ./templates
 //= require_tree .

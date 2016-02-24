@@ -1,13 +1,10 @@
-angular.module('AppController', ['CoolService', 'AwesomeDirective']).controller('AppCtrl', AppCtrl);
+angular.module('AppController', ['GameService']).controller('AppCtrl', ['$scope', 'Game',
+  function($scope, Game) {
+    new Game({}).create().then(function(results){
+      $scope.game = results;
+    });
 
-AppCtrl.$inject = ['$location', 'Cool'];
-
-function AppCtrl($location, Cool) {
-  var app = this;
-  app.heading = 'Rock Paper Scissors';
-  app.path = $location.host();
-  app.awesome = 'wait for it';
-  Cool.awesome.then(function(data) {
-    app.awesome = data.data.msg;
-  })
-}
+    $scope.saveGame = function () {
+      $scope.game.save();
+    }
+  }]);
