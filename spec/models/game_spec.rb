@@ -11,5 +11,5 @@ RSpec.describe Game, type: :model do
                      player_2_move: 'k')
     expect(g.winner).to eq("Bettsy")
   end
-  it "should save, but not calculate a winner only one player has played"
+  it "should save, but not calculate a winner if only one player has played"
 end
