@@ -1,5 +1,5 @@
 
-<div class="app" ng-app="RockPaperScissors">
+<div id="app" class="app" ng-app="RockPaperScissors">
 
   <div ng-controller="AppCtrl as app">
     <div class ="container">
@@ -27,6 +27,7 @@
     <div class='row'>
       <div class='col-md-2 col-md-offset-5'>
         <button ng-click="saveGame()" class='btn btn-primary'>Go</button>
+        <h1>{{counter}}</h1>
       </div>
     </div>
     <div class='row'>
