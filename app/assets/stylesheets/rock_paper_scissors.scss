@@ -5,6 +5,7 @@
 
 #rps{
   text-align: center;
+  border-bottom: solid black;
 }
 
 #player_1{
@@ -14,5 +15,13 @@
 
 #player_2{
   height:100%;
+  text-align: center;
+}
+
+#p1_score{
+  text-align: center;
+}
+
+#p2_score{
   text-align: center;
 }
