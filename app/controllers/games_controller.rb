@@ -24,6 +24,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params.require(:game).permit(:player_1_name, :player_1_move, :player_2_name, :player_2_move)
+    params.require(:game).permit(:player1_name, :player1_move, :player2_name, :player2_move)
   end
 end

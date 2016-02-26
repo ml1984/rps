@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20160224024338) do
   enable_extension "plpgsql"
 
   create_table "games", force: :cascade do |t|
-    t.string   "player_1_name"
-    t.string   "player_2_name"
-    t.string   "player_1_move"
-    t.string   "player_2_move"
+    t.string   "player1_name"
+    t.string   "player2_name"
+    t.string   "player1_move"
+    t.string   "player2_move"
     t.string   "winner"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

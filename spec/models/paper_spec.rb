@@ -7,7 +7,16 @@ RSpec.describe Paper, type: :model do
     b = Rock.new
     expect(a <=> b).to eq(1)
   end
+  
+  it "should cats game with paper" do
+    a = Paper.new
+    b = Paper.new
+    expect(a <=> b).to eq(0)
+  end
 
-  it "should cats game over paper"
-  it "should loose over scissors"
+  it "should loose over scissors" do
+    a = Paper.new
+    b = Scissor.new
+    expect(a <=> b).to eq(-1)
+  end
 end

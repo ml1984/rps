@@ -11,29 +11,29 @@
         <div class ="col-md-6" id=player_1>
           <h2>
             Player 1
-            <input type="text" ng-model="game.player_1_name"></input>
+            <input type="text" ng-model="game.player1_name"></input>
           </h2>
-          <p>Keyboard Controls: Rock A, Paper S, Scissors D</p>
+          <h4>Keyboard Controls: Rock A, Paper S, Scissors D</h4>
         </div>
         <div class ="col-md-6" id=player_2>
           <h2>
             Player 2
-            <input type="text" ng-model="game.player_2_name"></input>
+            <input type="text" ng-model="game.player2_name"></input>
           </h2>
-          <p>Keyboard Controls: Rock J, Paper K, Scissors L</p>
+          <h4>Keyboard Controls: Rock J, Paper K, Scissors L</h4>
         </div>
       </div>
     </div>
     <div class='row'>
-      <div class='col-md-2 col-md-offset-5'>
-        <button ng-click="saveGame()" class='btn btn-primary'>Go</button>
-        <button ng-click="resetGame()" class='btn btn-primary'>Reset</button>
+      <div class='col-md-3 col-md-offset-5'>
+        <button ng-click="saveGame()" class='btn btn-primary'>Start Game</button>
+        <button ng-click="resetGame()" class='btn btn-primary'>Play New Game</button>
         <h1>{{counter}}</h1>
       </div>
     </div>
     <div class='row'>
       <div class='col-md-2 col-md-offset-5'>
-        Winner is: {{game.winner}}
+        <h3>Winner is: {{game.winner}}</h3>
       </div>
     </div>
     <div class='row'>
@@ -52,9 +52,9 @@
         </div>
       </div>
 
-      </div>
-
     </div>
+
+  </div>
 </div>
 <!--
 

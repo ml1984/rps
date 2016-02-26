@@ -5,7 +5,7 @@ class Paper
       1
     elsif b.is_a?(Scissor)
       -1
-    elsif b.is_a?(Rock)
+    elsif b.is_a?(Paper)
       0
     end
   end

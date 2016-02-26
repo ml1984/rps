@@ -2,11 +2,11 @@ class Game < ActiveRecord::Base
   before_save :calculate_winner
 
   def player_1_object
-    if player_1_move == 'KeyA'
+    if player1_move == 'KeyA'
       Rock.new
-    elsif player_1_move == 'KeyS'
+    elsif player1_move == 'KeyS'
       Paper.new
-    elsif player_1_move == 'KeyD'
+    elsif player1_move == 'KeyD'
       Scissor.new
     else
       raise "I don't know this object"
@@ -14,11 +14,11 @@ class Game < ActiveRecord::Base
   end
 
   def player_2_object
-    if player_2_move == 'KeyJ'
+    if player2_move == 'KeyJ'
       Rock.new
-    elsif player_2_move == 'KeyK'
+    elsif player2_move == 'KeyK'
       Paper.new
-    elsif player_2_move == 'KeyL'
+    elsif player2_move == 'KeyL'
       Scissor.new
     else
       raise "I don't know this object"
@@ -26,17 +26,17 @@ class Game < ActiveRecord::Base
   end
 
   def calculate_winner
-    # exit this method if player_1_move or player_2_move is empty
-    return true unless player_1_move.present? && player_2_move.present?
+    # exit this method if player1_move or player2_move is empty
+    return true unless player1_move.present? && player2_move.present?
 
     # compare the two objects
     result = player_1_object <=> player_2_object
 
     # store the winner's name in winner column
     if result == 1
-      self.winner = player_1_name
+      self.winner = player1_name
     elsif result == -1
-      self.winner = player_2_name
+      self.winner = player2_name
     else #result == 0
       self.winner = "Cat's game"
     end
