@@ -11,10 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require angular
 //= require angularjs/rails/resource
-//= require angular-rails-templates
-//= require_tree ./templates
 //= require_tree .
-//= require jquery_ujs
