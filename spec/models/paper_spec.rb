@@ -7,4 +7,7 @@ RSpec.describe Paper, type: :model do
     b = Rock.new
     expect(a <=> b).to eq(1)
   end
+
+  it "should cats game over paper"
+  it "should loose over scissors"
 end

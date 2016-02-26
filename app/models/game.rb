@@ -2,11 +2,11 @@ class Game < ActiveRecord::Base
   before_save :calculate_winner
 
   def player_1_object
-    if player_1_move == 'a'
+    if player_1_move == 'KeyA'
       Rock.new
-    elsif player_1_move == 's'
+    elsif player_1_move == 'KeyS'
       Paper.new
-    elsif player_1_move == 'd'
+    elsif player_1_move == 'KeyD'
       Scissor.new
     else
       raise "I don't know this object"
@@ -14,11 +14,11 @@ class Game < ActiveRecord::Base
   end
 
   def player_2_object
-    if player_2_move == 'j'
+    if player_2_move == 'KeyJ'
       Rock.new
-    elsif player_2_move == 'k'
+    elsif player_2_move == 'KeyK'
       Paper.new
-    elsif player_2_move == 'l'
+    elsif player_2_move == 'KeyL'
       Scissor.new
     else
       raise "I don't know this object"
