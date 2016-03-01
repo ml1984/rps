@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   before_save :calculate_winner
-
+  
   def player_1_object
     if player1_move == 'KeyA'
       Rock.new

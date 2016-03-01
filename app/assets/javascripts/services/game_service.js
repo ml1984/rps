@@ -5,3 +5,4 @@ angular.module('GameService').factory('Game', ['railsResourceFactory', function 
         name: 'game'
     });
 }]);
+// factory from angularjs-rails-resource gem

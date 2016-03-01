@@ -1,16 +1,18 @@
 angular.module('AppController', ['GameService']).controller('AppCtrl', ['$scope', 'Game', '$interval', '$document',
   function($scope, Game, $interval, $document) {
+    // Calls /games#index and returns all previous games
     Game.query({}).then(function (results) {
       $scope.games = results;
-      
+
     })
 
+    // Calls /games#create and creates a new instance of game in the db
     new Game({}).create().then(function(results){
       $scope.game = results;
     });
     $scope.shouldListen = false;
     $scope.keypresses = [];
-
+    // saves player moves
     document.body.addEventListener('keydown', function(e) {
       if ($scope.shouldListen) {
         $scope.keypresses.push(e.code);
@@ -31,13 +33,13 @@ angular.module('AppController', ['GameService']).controller('AppCtrl', ['$scope'
         }
       }
     })
-
+    // resets game
     $scope.resetGame = function () {
       new Game({player1_name: $scope.game.player1_name, player2_name: $scope.game.player2_name }).create().then(function(results){
         $scope.game = results;
       });
     }
-
+    // saves game, starts timer, and activates EventListener for keypresses
     $scope.saveGame = function () {
       $scope.counter = 3;
       $scope.game.save();
