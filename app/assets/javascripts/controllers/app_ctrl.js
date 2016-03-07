@@ -37,11 +37,14 @@ angular.module('AppController', ['GameService']).controller('AppCtrl', ['$scope'
     $scope.resetGame = function () {
       new Game({player1_name: $scope.game.player1_name, player2_name: $scope.game.player2_name }).create().then(function(results){
         $scope.game = results;
+        $scope.game.player1_name = results.player1Name;
+        $scope.game.player2_name = results.player2Name;
       });
     }
     // saves game, starts timer, and activates EventListener for keypresses
     $scope.saveGame = function () {
       $scope.counter = 3;
+      console.log($scope.game);
       $scope.game.save();
       var counter = $interval(function() {
         $scope.counter--;

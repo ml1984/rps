@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   before_save :calculate_winner
-  
+
   def player_1_object
     if player1_move == 'KeyA'
       Rock.new
@@ -12,6 +12,13 @@ class Game < ActiveRecord::Base
       raise "I don't know this object"
     end
   end
+
+  # player move display work in progress
+  # def throw_short_name
+  #   throws = {'KeyA'=>'Rock','KeyB'=>'Paper','KeyD'=>'Scissor'}
+  #   throws[player1_move]
+  # end
+
 
   def player_2_object
     if player2_move == 'KeyJ'
